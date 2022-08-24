@@ -30,27 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Refreshbtn = new System.Windows.Forms.Button();
+            this.Categorysearch = new System.Windows.Forms.ComboBox();
+            this.Price = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Deletebtn = new System.Windows.Forms.Button();
+            this.Updatebtn = new System.Windows.Forms.Button();
+            this.Addbtn = new System.Windows.Forms.Button();
+            this.Categorybox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Quantity = new System.Windows.Forms.TextBox();
+            this.ProductName = new System.Windows.Forms.TextBox();
+            this.ProductId = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Attendantsbtn = new System.Windows.Forms.Button();
+            this.Sellingbtn = new System.Windows.Forms.Button();
+            this.Categoriesbtn = new System.Windows.Forms.Button();
+            this.Logoutbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -59,73 +60,200 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.Refreshbtn);
+            this.panel1.Controls.Add(this.Categorysearch);
+            this.panel1.Controls.Add(this.Price);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.Deletebtn);
+            this.panel1.Controls.Add(this.Updatebtn);
+            this.panel1.Controls.Add(this.Addbtn);
+            this.panel1.Controls.Add(this.Categorybox);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Quantity);
+            this.panel1.Controls.Add(this.ProductName);
+            this.panel1.Controls.Add(this.ProductId);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(122, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(789, 495);
+            this.panel1.Size = new System.Drawing.Size(785, 495);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(21, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Attendants";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.ForeColor = System.Drawing.Color.Snow;
-            this.button2.Location = new System.Drawing.Point(21, 274);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Selling";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Firebrick;
-            this.button3.ForeColor = System.Drawing.Color.Snow;
-            this.button3.Location = new System.Drawing.Point(21, 200);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Categories";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(889, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Refreshbtn
+            // 
+            this.Refreshbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Refreshbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Refreshbtn.Location = new System.Drawing.Point(597, 78);
+            this.Refreshbtn.Name = "Refreshbtn";
+            this.Refreshbtn.Size = new System.Drawing.Size(61, 23);
+            this.Refreshbtn.TabIndex = 18;
+            this.Refreshbtn.Text = "Refresh";
+            this.Refreshbtn.UseVisualStyleBackColor = false;
+            // 
+            // Categorysearch
+            // 
+            this.Categorysearch.ForeColor = System.Drawing.Color.Firebrick;
+            this.Categorysearch.FormattingEnabled = true;
+            this.Categorysearch.Location = new System.Drawing.Point(476, 78);
+            this.Categorysearch.Name = "Categorysearch";
+            this.Categorysearch.Size = new System.Drawing.Size(115, 21);
+            this.Categorysearch.TabIndex = 17;
+            this.Categorysearch.Text = "Select Category";
+            // 
+            // Price
+            // 
+            this.Price.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Price.Location = new System.Drawing.Point(97, 336);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(115, 20);
+            this.Price.TabIndex = 16;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(0, 297);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "CATEGORY";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(261, 105);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(511, 376);
+            this.dataGridView1.TabIndex = 14;
+            // 
+            // Deletebtn
+            // 
+            this.Deletebtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Deletebtn.ForeColor = System.Drawing.Color.Snow;
+            this.Deletebtn.Location = new System.Drawing.Point(176, 397);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(58, 23);
+            this.Deletebtn.TabIndex = 13;
+            this.Deletebtn.Text = "DELETE";
+            this.Deletebtn.UseVisualStyleBackColor = false;
+            // 
+            // Updatebtn
+            // 
+            this.Updatebtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Updatebtn.ForeColor = System.Drawing.Color.Snow;
+            this.Updatebtn.Location = new System.Drawing.Point(97, 397);
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.Size = new System.Drawing.Size(73, 23);
+            this.Updatebtn.TabIndex = 5;
+            this.Updatebtn.Text = "UPDATE";
+            this.Updatebtn.UseVisualStyleBackColor = false;
+            // 
+            // Addbtn
+            // 
+            this.Addbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Addbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Addbtn.Location = new System.Drawing.Point(30, 397);
+            this.Addbtn.Name = "Addbtn";
+            this.Addbtn.Size = new System.Drawing.Size(61, 23);
+            this.Addbtn.TabIndex = 6;
+            this.Addbtn.Text = "ADD";
+            this.Addbtn.UseVisualStyleBackColor = false;
+            this.Addbtn.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // Categorybox
+            // 
+            this.Categorybox.ForeColor = System.Drawing.Color.Firebrick;
+            this.Categorybox.FormattingEnabled = true;
+            this.Categorybox.Location = new System.Drawing.Point(97, 289);
+            this.Categorybox.Name = "Categorybox";
+            this.Categorybox.Size = new System.Drawing.Size(115, 21);
+            this.Categorybox.TabIndex = 12;
+            this.Categorybox.Text = "Select Category";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label5.ForeColor = System.Drawing.Color.Snow;
+            this.label5.Location = new System.Drawing.Point(4, 343);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "PRICE";
+            // 
+            // Quantity
+            // 
+            this.Quantity.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Quantity.Location = new System.Drawing.Point(97, 235);
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(115, 20);
+            this.Quantity.TabIndex = 10;
+            // 
+            // ProductName
+            // 
+            this.ProductName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ProductName.Location = new System.Drawing.Point(97, 174);
+            this.ProductName.Name = "ProductName";
+            this.ProductName.Size = new System.Drawing.Size(115, 20);
+            this.ProductName.TabIndex = 9;
+            // 
+            // ProductId
+            // 
+            this.ProductId.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ProductId.Location = new System.Drawing.Point(97, 105);
+            this.ProductId.Name = "ProductId";
+            this.ProductId.Size = new System.Drawing.Size(115, 20);
+            this.ProductId.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label4.ForeColor = System.Drawing.Color.Snow;
+            this.label4.Location = new System.Drawing.Point(3, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "QUANTITY";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label3.ForeColor = System.Drawing.Color.Snow;
+            this.label3.Location = new System.Drawing.Point(3, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "NAME";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(3, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "ID";
             // 
             // label1
             // 
@@ -139,174 +267,61 @@
             this.label1.Text = "MANAGE PRODUCTS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // Attendantsbtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(3, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "ID";
+            this.Attendantsbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Attendantsbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Attendantsbtn.Location = new System.Drawing.Point(21, 141);
+            this.Attendantsbtn.Name = "Attendantsbtn";
+            this.Attendantsbtn.Size = new System.Drawing.Size(75, 23);
+            this.Attendantsbtn.TabIndex = 1;
+            this.Attendantsbtn.Text = "Attendants";
+            this.Attendantsbtn.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // Sellingbtn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(3, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "NAME";
+            this.Sellingbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Sellingbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Sellingbtn.Location = new System.Drawing.Point(21, 274);
+            this.Sellingbtn.Name = "Sellingbtn";
+            this.Sellingbtn.Size = new System.Drawing.Size(75, 23);
+            this.Sellingbtn.TabIndex = 2;
+            this.Sellingbtn.Text = "Selling";
+            this.Sellingbtn.UseVisualStyleBackColor = false;
             // 
-            // label4
+            // Categoriesbtn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(3, 238);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "QUANTITY";
+            this.Categoriesbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Categoriesbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Categoriesbtn.Location = new System.Drawing.Point(21, 200);
+            this.Categoriesbtn.Name = "Categoriesbtn";
+            this.Categoriesbtn.Size = new System.Drawing.Size(75, 23);
+            this.Categoriesbtn.TabIndex = 3;
+            this.Categoriesbtn.Text = "Categories";
+            this.Categoriesbtn.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // Logoutbtn
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.Location = new System.Drawing.Point(97, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(97, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox3.Location = new System.Drawing.Point(97, 235);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(115, 20);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(4, 343);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "PRICE";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.ForeColor = System.Drawing.Color.Firebrick;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(97, 289);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
-            this.comboBox1.TabIndex = 12;
-            this.comboBox1.Text = "Select Category";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Firebrick;
-            this.button4.ForeColor = System.Drawing.Color.Snow;
-            this.button4.Location = new System.Drawing.Point(97, 397);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(57, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "EDIT";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Firebrick;
-            this.button5.ForeColor = System.Drawing.Color.Snow;
-            this.button5.Location = new System.Drawing.Point(13, 397);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "ADD";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Firebrick;
-            this.button6.ForeColor = System.Drawing.Color.Snow;
-            this.button6.Location = new System.Drawing.Point(176, 397);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(58, 23);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "DELETE";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(261, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(511, 376);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(0, 297);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "CATEGORY";
-            // 
-            // textBox4
-            // 
-            this.textBox4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox4.Location = new System.Drawing.Point(97, 336);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(115, 20);
-            this.textBox4.TabIndex = 16;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.ForeColor = System.Drawing.Color.Firebrick;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(476, 78);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(115, 21);
-            this.comboBox2.TabIndex = 17;
-            this.comboBox2.Text = "Select Category";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Firebrick;
-            this.button7.ForeColor = System.Drawing.Color.Snow;
-            this.button7.Location = new System.Drawing.Point(597, 78);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(61, 23);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Refresh";
-            this.button7.UseVisualStyleBackColor = false;
+            this.Logoutbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Logoutbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Logoutbtn.Location = new System.Drawing.Point(21, 436);
+            this.Logoutbtn.Name = "Logoutbtn";
+            this.Logoutbtn.Size = new System.Drawing.Size(75, 34);
+            this.Logoutbtn.TabIndex = 20;
+            this.Logoutbtn.Text = "LOG OUT";
+            this.Logoutbtn.UseVisualStyleBackColor = false;
+            this.Logoutbtn.Click += new System.EventHandler(this.button8_Click);
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 519);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(929, 519);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Logoutbtn);
+            this.Controls.Add(this.Categoriesbtn);
+            this.Controls.Add(this.Sellingbtn);
+            this.Controls.Add(this.Attendantsbtn);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductForm";
@@ -324,26 +339,27 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Attendantsbtn;
+        private System.Windows.Forms.Button Sellingbtn;
+        private System.Windows.Forms.Button Categoriesbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button Deletebtn;
+        private System.Windows.Forms.Button Updatebtn;
+        private System.Windows.Forms.Button Addbtn;
+        private System.Windows.Forms.ComboBox Categorybox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Quantity;
+        private System.Windows.Forms.TextBox ProductName;
+        private System.Windows.Forms.TextBox ProductId;
+        private System.Windows.Forms.Button Refreshbtn;
+        private System.Windows.Forms.ComboBox Categorysearch;
+        private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Logoutbtn;
     }
 }
