@@ -34,10 +34,18 @@
             this.Sellingbtn = new System.Windows.Forms.Button();
             this.Attendantsbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AttendantNamelbl = new System.Windows.Forms.Label();
+            this.Datelbl = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Amountlbl = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AddProductbtn = new System.Windows.Forms.Button();
+            this.ProdDGV = new System.Windows.Forms.DataGridView();
+            this.OrderDGV = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Refreshbtn = new System.Windows.Forms.Button();
             this.Price = new System.Windows.Forms.TextBox();
-            this.BillsDVG = new System.Windows.Forms.DataGridView();
+            this.BillDGV = new System.Windows.Forms.DataGridView();
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Printbtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
@@ -50,25 +58,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.OrdersDVG = new System.Windows.Forms.DataGridView();
-            this.ProdDGV = new System.Windows.Forms.DataGridView();
-            this.AddProductbtn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Amountlbl = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Datelbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.AttendantNamelbl = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProdPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProdQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Totalamt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillsDVG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersDVG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,11 +126,11 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.AddProductbtn);
             this.panel1.Controls.Add(this.ProdDGV);
-            this.panel1.Controls.Add(this.OrdersDVG);
+            this.panel1.Controls.Add(this.OrderDGV);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Refreshbtn);
             this.panel1.Controls.Add(this.Price);
-            this.panel1.Controls.Add(this.BillsDVG);
+            this.panel1.Controls.Add(this.BillDGV);
             this.panel1.Controls.Add(this.Deletebtn);
             this.panel1.Controls.Add(this.Printbtn);
             this.panel1.Controls.Add(this.Addbtn);
@@ -143,10 +143,102 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(149, 12);
+            this.panel1.Location = new System.Drawing.Point(137, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(810, 542);
             this.panel1.TabIndex = 26;
+            // 
+            // AttendantNamelbl
+            // 
+            this.AttendantNamelbl.AutoSize = true;
+            this.AttendantNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.AttendantNamelbl.ForeColor = System.Drawing.Color.Snow;
+            this.AttendantNamelbl.Location = new System.Drawing.Point(3, 5);
+            this.AttendantNamelbl.Name = "AttendantNamelbl";
+            this.AttendantNamelbl.Size = new System.Drawing.Size(112, 13);
+            this.AttendantNamelbl.TabIndex = 26;
+            this.AttendantNamelbl.Text = "ATTEDANT NAME";
+            // 
+            // Datelbl
+            // 
+            this.Datelbl.AutoSize = true;
+            this.Datelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Datelbl.ForeColor = System.Drawing.Color.Snow;
+            this.Datelbl.Location = new System.Drawing.Point(720, 5);
+            this.Datelbl.Name = "Datelbl";
+            this.Datelbl.Size = new System.Drawing.Size(40, 13);
+            this.Datelbl.TabIndex = 25;
+            this.Datelbl.Text = "DATE";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label8.ForeColor = System.Drawing.Color.Snow;
+            this.label8.Location = new System.Drawing.Point(485, 299);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "SALES LIST";
+            // 
+            // Amountlbl
+            // 
+            this.Amountlbl.AutoSize = true;
+            this.Amountlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.Amountlbl.ForeColor = System.Drawing.Color.Snow;
+            this.Amountlbl.Location = new System.Drawing.Point(556, 233);
+            this.Amountlbl.Name = "Amountlbl";
+            this.Amountlbl.Size = new System.Drawing.Size(37, 13);
+            this.Amountlbl.TabIndex = 23;
+            this.Amountlbl.Text = " GHC";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Location = new System.Drawing.Point(420, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "AMOUNT GHC";
+            // 
+            // AddProductbtn
+            // 
+            this.AddProductbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.AddProductbtn.ForeColor = System.Drawing.Color.Snow;
+            this.AddProductbtn.Location = new System.Drawing.Point(72, 207);
+            this.AddProductbtn.Name = "AddProductbtn";
+            this.AddProductbtn.Size = new System.Drawing.Size(113, 23);
+            this.AddProductbtn.TabIndex = 21;
+            this.AddProductbtn.Text = "ADD PRODUCTS";
+            this.AddProductbtn.UseVisualStyleBackColor = false;
+            // 
+            // ProdDGV
+            // 
+            this.ProdDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProdDGV.Location = new System.Drawing.Point(12, 265);
+            this.ProdDGV.Name = "ProdDGV";
+            this.ProdDGV.Size = new System.Drawing.Size(212, 219);
+            this.ProdDGV.TabIndex = 20;
+            this.ProdDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdDGV_CellContentClick);
+            // 
+            // OrderDGV
+            // 
+            this.OrderDGV.BackgroundColor = System.Drawing.Color.White;
+            this.OrderDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PID,
+            this.PName,
+            this.PPrice,
+            this.PQuantity,
+            this.Totalamt});
+            this.OrderDGV.Location = new System.Drawing.Point(274, 67);
+            this.OrderDGV.Name = "OrderDGV";
+            this.OrderDGV.Size = new System.Drawing.Size(533, 163);
+            this.OrderDGV.TabIndex = 19;
+            this.OrderDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.OrdersDVG_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -177,14 +269,14 @@
             this.Price.Size = new System.Drawing.Size(140, 20);
             this.Price.TabIndex = 16;
             // 
-            // BillsDVG
+            // BillDGV
             // 
-            this.BillsDVG.BackgroundColor = System.Drawing.Color.White;
-            this.BillsDVG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BillsDVG.Location = new System.Drawing.Point(274, 318);
-            this.BillsDVG.Name = "BillsDVG";
-            this.BillsDVG.Size = new System.Drawing.Size(533, 166);
-            this.BillsDVG.TabIndex = 14;
+            this.BillDGV.BackgroundColor = System.Drawing.Color.White;
+            this.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BillDGV.Location = new System.Drawing.Point(274, 318);
+            this.BillDGV.Name = "BillDGV";
+            this.BillDGV.Size = new System.Drawing.Size(533, 166);
+            this.BillDGV.TabIndex = 14;
             // 
             // Deletebtn
             // 
@@ -308,85 +400,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "SALES STATUS";
             // 
-            // OrdersDVG
-            // 
-            this.OrdersDVG.BackgroundColor = System.Drawing.Color.White;
-            this.OrdersDVG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrdersDVG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Name,
-            this.ProdPrice,
-            this.ProdQuantity,
-            this.Total});
-            this.OrdersDVG.Location = new System.Drawing.Point(274, 67);
-            this.OrdersDVG.Name = "OrdersDVG";
-            this.OrdersDVG.Size = new System.Drawing.Size(533, 163);
-            this.OrdersDVG.TabIndex = 19;
-            // 
-            // ProdDGV
-            // 
-            this.ProdDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProdDGV.Location = new System.Drawing.Point(12, 265);
-            this.ProdDGV.Name = "ProdDGV";
-            this.ProdDGV.Size = new System.Drawing.Size(212, 219);
-            this.ProdDGV.TabIndex = 20;
-            // 
-            // AddProductbtn
-            // 
-            this.AddProductbtn.BackColor = System.Drawing.Color.Firebrick;
-            this.AddProductbtn.ForeColor = System.Drawing.Color.Snow;
-            this.AddProductbtn.Location = new System.Drawing.Point(72, 207);
-            this.AddProductbtn.Name = "AddProductbtn";
-            this.AddProductbtn.Size = new System.Drawing.Size(113, 23);
-            this.AddProductbtn.TabIndex = 21;
-            this.AddProductbtn.Text = "ADD PRODUCTS";
-            this.AddProductbtn.UseVisualStyleBackColor = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(420, 233);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "AMOUNT GHC";
-            // 
-            // Amountlbl
-            // 
-            this.Amountlbl.AutoSize = true;
-            this.Amountlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.Amountlbl.ForeColor = System.Drawing.Color.Snow;
-            this.Amountlbl.Location = new System.Drawing.Point(556, 233);
-            this.Amountlbl.Name = "Amountlbl";
-            this.Amountlbl.Size = new System.Drawing.Size(37, 13);
-            this.Amountlbl.TabIndex = 23;
-            this.Amountlbl.Text = " GHC";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.label8.ForeColor = System.Drawing.Color.Snow;
-            this.label8.Location = new System.Drawing.Point(485, 299);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 13);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "SALES LIST";
-            // 
-            // Datelbl
-            // 
-            this.Datelbl.AutoSize = true;
-            this.Datelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.Datelbl.ForeColor = System.Drawing.Color.Snow;
-            this.Datelbl.Location = new System.Drawing.Point(720, 5);
-            this.Datelbl.Name = "Datelbl";
-            this.Datelbl.Size = new System.Drawing.Size(40, 13);
-            this.Datelbl.TabIndex = 25;
-            this.Datelbl.Text = "DATE";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -397,41 +410,30 @@
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
             // 
-            // AttendantNamelbl
+            // PID
             // 
-            this.AttendantNamelbl.AutoSize = true;
-            this.AttendantNamelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.AttendantNamelbl.ForeColor = System.Drawing.Color.Snow;
-            this.AttendantNamelbl.Location = new System.Drawing.Point(3, 5);
-            this.AttendantNamelbl.Name = "AttendantNamelbl";
-            this.AttendantNamelbl.Size = new System.Drawing.Size(112, 13);
-            this.AttendantNamelbl.TabIndex = 26;
-            this.AttendantNamelbl.Text = "ATTEDANT NAME";
+            this.PID.HeaderText = "ProductId";
+            this.PID.Name = "PID";
             // 
-            // ID
+            // PName
             // 
-            this.ID.HeaderText = "ProductId";
-            this.ID.Name = "ID";
+            this.PName.HeaderText = "ProductName";
+            this.PName.Name = "PName";
             // 
-            // Name
+            // PPrice
             // 
-            this.Name.HeaderText = "ProductName";
-            this.Name.Name = "Name";
+            this.PPrice.HeaderText = "Price";
+            this.PPrice.Name = "PPrice";
             // 
-            // ProdPrice
+            // PQuantity
             // 
-            this.ProdPrice.HeaderText = "Price";
-            this.ProdPrice.Name = "ProdPrice";
+            this.PQuantity.HeaderText = "Quantity";
+            this.PQuantity.Name = "PQuantity";
             // 
-            // ProdQuantity
+            // Totalamt
             // 
-            this.ProdQuantity.HeaderText = "Quantity";
-            this.ProdQuantity.Name = "ProdQuantity";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
+            this.Totalamt.HeaderText = "Total";
+            this.Totalamt.Name = "Totalamt";
             // 
             // SellingForm
             // 
@@ -450,10 +452,10 @@
             this.Text = "SellingForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BillsDVG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersDVG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -472,11 +474,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button AddProductbtn;
         private System.Windows.Forms.DataGridView ProdDGV;
-        private System.Windows.Forms.DataGridView OrdersDVG;
+        private System.Windows.Forms.DataGridView OrderDGV;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Refreshbtn;
         private System.Windows.Forms.TextBox Price;
-        private System.Windows.Forms.DataGridView BillsDVG;
+        private System.Windows.Forms.DataGridView BillDGV;
         private System.Windows.Forms.Button Deletebtn;
         private System.Windows.Forms.Button Printbtn;
         private System.Windows.Forms.Button Addbtn;
@@ -491,10 +493,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label AttendantNamelbl;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProdPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProdQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Totalamt;
     }
 }

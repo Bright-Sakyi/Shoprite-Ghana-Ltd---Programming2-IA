@@ -16,5 +16,15 @@ namespace Shoprite_Ghana_Ltd
         {
             InitializeComponent();
         }
+
+        private void OrdersDVG_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ProdDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

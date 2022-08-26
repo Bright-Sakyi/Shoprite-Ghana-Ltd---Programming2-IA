@@ -207,6 +207,7 @@
             this.Productsbtn.TabIndex = 9;
             this.Productsbtn.Text = "Products";
             this.Productsbtn.UseVisualStyleBackColor = false;
+            this.Productsbtn.Click += new System.EventHandler(this.Productsbtn_Click);
             // 
             // sellingbtn
             // 
@@ -218,6 +219,7 @@
             this.sellingbtn.TabIndex = 8;
             this.sellingbtn.Text = "Selling";
             this.sellingbtn.UseVisualStyleBackColor = false;
+            this.sellingbtn.Click += new System.EventHandler(this.sellingbtn_Click);
             // 
             // Attendantsbtn
             // 
@@ -229,6 +231,7 @@
             this.Attendantsbtn.TabIndex = 7;
             this.Attendantsbtn.Text = "Attendants";
             this.Attendantsbtn.UseVisualStyleBackColor = false;
+            this.Attendantsbtn.Click += new System.EventHandler(this.Attendantsbtn_Click);
             // 
             // Logoutbtn
             // 

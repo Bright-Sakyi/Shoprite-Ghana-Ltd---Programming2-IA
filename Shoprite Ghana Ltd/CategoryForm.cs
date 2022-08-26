@@ -82,7 +82,7 @@ namespace Shoprite_Ghana_Ltd
                 else
                 {
                     Con.Open();
-                    string query = "update CategoriesTbl set CategoryName='" + CategoryName.Text + "',CategoryDescription='" + CategoryDescription.Text + "' where CategoryId=" + CategoryId.Text + "";
+                    string query = "update CategoryTbl set CategoryName='" + CategoryName.Text + "',CategoryDescription='" + CategoryDescription.Text + "' where CategoryId=" + CategoryId.Text + "";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Category has been updated Successfully");
@@ -132,6 +132,27 @@ namespace Shoprite_Ghana_Ltd
             this.Hide();
             Form1 login = new Form1();
             login.Show();
+        }
+
+        private void Attendantsbtn_Click(object sender, EventArgs e)
+        {
+            AttendantForm Attend = new AttendantForm();
+            Attend.Show();
+            this.Hide();
+        }
+
+        private void Productsbtn_Click(object sender, EventArgs e)
+        {
+            ProductForm Prod = new ProductForm();
+            Prod.Show();
+            this.Hide();
+        }
+
+        private void sellingbtn_Click(object sender, EventArgs e)
+        {
+            SellingForm sales = new SellingForm();
+            sales.Show();
+            this.Hide();
         }
     }
 }
