@@ -16,7 +16,7 @@ namespace Shoprite_Ghana_Ltd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductForm());
+            Application.Run(new Form1());
         }
     }
 }

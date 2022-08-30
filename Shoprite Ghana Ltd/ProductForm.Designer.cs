@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProductDGV = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Refreshbtn = new System.Windows.Forms.Button();
             this.Categorysearch = new System.Windows.Forms.ComboBox();
             this.Price = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.ProductDGV = new System.Windows.Forms.DataGridView();
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Attendantsbtn = new System.Windows.Forms.Button();
             this.Sellingbtn = new System.Windows.Forms.Button();
             this.Categoriesbtn = new System.Windows.Forms.Button();
@@ -60,11 +60,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.ProductDGV);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Refreshbtn);
             this.panel1.Controls.Add(this.Categorysearch);
             this.panel1.Controls.Add(this.Price);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.ProductDGV);
             this.panel1.Controls.Add(this.Deletebtn);
             this.panel1.Controls.Add(this.Updatebtn);
             this.panel1.Controls.Add(this.Addbtn);
@@ -77,33 +78,57 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(122, 12);
+            this.panel1.Location = new System.Drawing.Point(133, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(785, 495);
+            this.panel1.Size = new System.Drawing.Size(798, 509);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // ProductDGV
+            // 
+            this.ProductDGV.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDGV.Location = new System.Drawing.Point(230, 105);
+            this.ProductDGV.Name = "ProductDGV";
+            this.ProductDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductDGV.Size = new System.Drawing.Size(563, 251);
+            this.ProductDGV.TabIndex = 19;
+            this.ProductDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDGV_CellContentClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(760, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Refreshbtn
             // 
             this.Refreshbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Refreshbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Refreshbtn.Location = new System.Drawing.Point(597, 78);
+            this.Refreshbtn.Location = new System.Drawing.Point(516, 451);
             this.Refreshbtn.Name = "Refreshbtn";
             this.Refreshbtn.Size = new System.Drawing.Size(61, 23);
             this.Refreshbtn.TabIndex = 18;
             this.Refreshbtn.Text = "Refresh";
             this.Refreshbtn.UseVisualStyleBackColor = false;
+            this.Refreshbtn.Click += new System.EventHandler(this.Refreshbtn_Click);
             // 
             // Categorysearch
             // 
             this.Categorysearch.ForeColor = System.Drawing.Color.Firebrick;
             this.Categorysearch.FormattingEnabled = true;
-            this.Categorysearch.Location = new System.Drawing.Point(476, 78);
+            this.Categorysearch.Location = new System.Drawing.Point(395, 451);
             this.Categorysearch.Name = "Categorysearch";
             this.Categorysearch.Size = new System.Drawing.Size(115, 21);
             this.Categorysearch.TabIndex = 17;
             this.Categorysearch.Text = "Select Category";
             this.Categorysearch.SelectedIndexChanged += new System.EventHandler(this.Categorysearch_SelectedIndexChanged);
+            this.Categorysearch.SelectionChangeCommitted += new System.EventHandler(this.Categorysearch_SelectionChangeCommitted);
             // 
             // Price
             // 
@@ -123,16 +148,6 @@
             this.label6.Size = new System.Drawing.Size(74, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "CATEGORY";
-            // 
-            // ProductDGV
-            // 
-            this.ProductDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductDGV.Location = new System.Drawing.Point(261, 105);
-            this.ProductDGV.Name = "ProductDGV";
-            this.ProductDGV.Size = new System.Drawing.Size(511, 376);
-            this.ProductDGV.TabIndex = 14;
-            this.ProductDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Deletebtn
             // 
@@ -179,6 +194,8 @@
             this.Categorybox.Size = new System.Drawing.Size(115, 21);
             this.Categorybox.TabIndex = 12;
             this.Categorybox.Text = "Select Category";
+            this.Categorybox.SelectedIndexChanged += new System.EventHandler(this.Categorybox_SelectedIndexChanged);
+            this.Categorybox.SelectionChangeCommitted += new System.EventHandler(this.Categorybox_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -260,17 +277,6 @@
             this.label1.Text = "MANAGE PRODUCTS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(889, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Attendantsbtn
             // 
             this.Attendantsbtn.BackColor = System.Drawing.Color.Firebrick;
@@ -281,6 +287,7 @@
             this.Attendantsbtn.TabIndex = 1;
             this.Attendantsbtn.Text = "Attendants";
             this.Attendantsbtn.UseVisualStyleBackColor = false;
+            this.Attendantsbtn.Click += new System.EventHandler(this.Attendantsbtn_Click);
             // 
             // Sellingbtn
             // 
@@ -290,8 +297,9 @@
             this.Sellingbtn.Name = "Sellingbtn";
             this.Sellingbtn.Size = new System.Drawing.Size(75, 23);
             this.Sellingbtn.TabIndex = 2;
-            this.Sellingbtn.Text = "Selling";
+            this.Sellingbtn.Text = "Sales";
             this.Sellingbtn.UseVisualStyleBackColor = false;
+            this.Sellingbtn.Click += new System.EventHandler(this.Sellingbtn_Click);
             // 
             // Categoriesbtn
             // 
@@ -303,6 +311,7 @@
             this.Categoriesbtn.TabIndex = 3;
             this.Categoriesbtn.Text = "Categories";
             this.Categoriesbtn.UseVisualStyleBackColor = false;
+            this.Categoriesbtn.Click += new System.EventHandler(this.Categoriesbtn_Click);
             // 
             // Logoutbtn
             // 
@@ -320,8 +329,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 519);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(929, 507);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Categoriesbtn);
             this.Controls.Add(this.Sellingbtn);
@@ -363,7 +371,7 @@
         private System.Windows.Forms.ComboBox Categorysearch;
         private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView ProductDGV;
         private System.Windows.Forms.Button Logoutbtn;
+        private System.Windows.Forms.DataGridView ProductDGV;
     }
 }

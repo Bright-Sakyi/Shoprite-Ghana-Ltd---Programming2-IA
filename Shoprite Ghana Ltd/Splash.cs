@@ -35,5 +35,10 @@ namespace Shoprite_Ghana_Ltd
         {
             timer1.Start();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttendantForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AttendantsDGV = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.SellerPassword = new System.Windows.Forms.TextBox();
-            this.SellerPhone = new System.Windows.Forms.TextBox();
+            this.AttendantPassword = new System.Windows.Forms.TextBox();
+            this.AttendantPhone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AttendantsDGV = new System.Windows.Forms.DataGridView();
             this.Deletebtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
-            this.SellerAge = new System.Windows.Forms.TextBox();
-            this.SellerName = new System.Windows.Forms.TextBox();
-            this.SellerId = new System.Windows.Forms.TextBox();
+            this.AttendantAge = new System.Windows.Forms.TextBox();
+            this.AttendantName = new System.Windows.Forms.TextBox();
+            this.AttendantId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,34 +51,45 @@
             this.Productsbtn = new System.Windows.Forms.Button();
             this.Logoutbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AttendantsDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
+            this.panel1.Controls.Add(this.AttendantsDGV);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.SellerPassword);
-            this.panel1.Controls.Add(this.SellerPhone);
+            this.panel1.Controls.Add(this.AttendantPassword);
+            this.panel1.Controls.Add(this.AttendantPhone);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.AttendantsDGV);
             this.panel1.Controls.Add(this.Deletebtn);
             this.panel1.Controls.Add(this.Updatebtn);
             this.panel1.Controls.Add(this.Addbtn);
-            this.panel1.Controls.Add(this.SellerAge);
-            this.panel1.Controls.Add(this.SellerName);
-            this.panel1.Controls.Add(this.SellerId);
+            this.panel1.Controls.Add(this.AttendantAge);
+            this.panel1.Controls.Add(this.AttendantName);
+            this.panel1.Controls.Add(this.AttendantId);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(119, 12);
+            this.panel1.Location = new System.Drawing.Point(133, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(789, 495);
+            this.panel1.Size = new System.Drawing.Size(785, 506);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // AttendantsDGV
+            // 
+            this.AttendantsDGV.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.AttendantsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AttendantsDGV.Location = new System.Drawing.Point(230, 76);
+            this.AttendantsDGV.Name = "AttendantsDGV";
+            this.AttendantsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AttendantsDGV.Size = new System.Drawing.Size(544, 344);
+            this.AttendantsDGV.TabIndex = 19;
+            this.AttendantsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendantsDGV_CellContentClick_1);
             // 
             // label6
             // 
@@ -92,23 +103,23 @@
             this.label6.Text = "PASSWORD";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // SellerPassword
+            // AttendantPassword
             // 
-            this.SellerPassword.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SellerPassword.Location = new System.Drawing.Point(97, 282);
-            this.SellerPassword.Name = "SellerPassword";
-            this.SellerPassword.Size = new System.Drawing.Size(115, 20);
-            this.SellerPassword.TabIndex = 17;
-            this.SellerPassword.TextChanged += new System.EventHandler(this.SellerPassword_TextChanged);
+            this.AttendantPassword.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AttendantPassword.Location = new System.Drawing.Point(97, 282);
+            this.AttendantPassword.Name = "AttendantPassword";
+            this.AttendantPassword.Size = new System.Drawing.Size(115, 20);
+            this.AttendantPassword.TabIndex = 17;
+            this.AttendantPassword.TextChanged += new System.EventHandler(this.SellerPassword_TextChanged);
             // 
-            // SellerPhone
+            // AttendantPhone
             // 
-            this.SellerPhone.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SellerPhone.Location = new System.Drawing.Point(97, 241);
-            this.SellerPhone.Name = "SellerPhone";
-            this.SellerPhone.Size = new System.Drawing.Size(115, 20);
-            this.SellerPhone.TabIndex = 16;
-            this.SellerPhone.TextChanged += new System.EventHandler(this.SellerPhone_TextChanged);
+            this.AttendantPhone.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AttendantPhone.Location = new System.Drawing.Point(97, 241);
+            this.AttendantPhone.Name = "AttendantPhone";
+            this.AttendantPhone.Size = new System.Drawing.Size(115, 20);
+            this.AttendantPhone.TabIndex = 16;
+            this.AttendantPhone.TextChanged += new System.EventHandler(this.SellerPhone_TextChanged);
             // 
             // label5
             // 
@@ -125,23 +136,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(751, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(744, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // AttendantsDGV
-            // 
-            this.AttendantsDGV.BackgroundColor = System.Drawing.Color.White;
-            this.AttendantsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AttendantsDGV.Location = new System.Drawing.Point(249, 84);
-            this.AttendantsDGV.Name = "AttendantsDGV";
-            this.AttendantsDGV.Size = new System.Drawing.Size(511, 376);
-            this.AttendantsDGV.TabIndex = 14;
-            this.AttendantsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AttendantsDGV_CellContentClick);
             // 
             // Deletebtn
             // 
@@ -179,32 +180,32 @@
             this.Addbtn.UseVisualStyleBackColor = false;
             this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
-            // SellerAge
+            // AttendantAge
             // 
-            this.SellerAge.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SellerAge.Location = new System.Drawing.Point(97, 196);
-            this.SellerAge.Name = "SellerAge";
-            this.SellerAge.Size = new System.Drawing.Size(115, 20);
-            this.SellerAge.TabIndex = 10;
-            this.SellerAge.TextChanged += new System.EventHandler(this.SellerAge_TextChanged);
+            this.AttendantAge.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AttendantAge.Location = new System.Drawing.Point(97, 196);
+            this.AttendantAge.Name = "AttendantAge";
+            this.AttendantAge.Size = new System.Drawing.Size(115, 20);
+            this.AttendantAge.TabIndex = 10;
+            this.AttendantAge.TextChanged += new System.EventHandler(this.SellerAge_TextChanged);
             // 
-            // SellerName
+            // AttendantName
             // 
-            this.SellerName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SellerName.Location = new System.Drawing.Point(97, 147);
-            this.SellerName.Name = "SellerName";
-            this.SellerName.Size = new System.Drawing.Size(115, 20);
-            this.SellerName.TabIndex = 9;
-            this.SellerName.TextChanged += new System.EventHandler(this.SellerName_TextChanged);
+            this.AttendantName.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AttendantName.Location = new System.Drawing.Point(97, 147);
+            this.AttendantName.Name = "AttendantName";
+            this.AttendantName.Size = new System.Drawing.Size(115, 20);
+            this.AttendantName.TabIndex = 9;
+            this.AttendantName.TextChanged += new System.EventHandler(this.SellerName_TextChanged);
             // 
-            // SellerId
+            // AttendantId
             // 
-            this.SellerId.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.SellerId.Location = new System.Drawing.Point(97, 105);
-            this.SellerId.Name = "SellerId";
-            this.SellerId.Size = new System.Drawing.Size(115, 20);
-            this.SellerId.TabIndex = 8;
-            this.SellerId.TextChanged += new System.EventHandler(this.SellerId_TextChanged);
+            this.AttendantId.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.AttendantId.Location = new System.Drawing.Point(97, 105);
+            this.AttendantId.Name = "AttendantId";
+            this.AttendantId.Size = new System.Drawing.Size(115, 20);
+            this.AttendantId.TabIndex = 8;
+            this.AttendantId.TextChanged += new System.EventHandler(this.SellerId_TextChanged);
             // 
             // label4
             // 
@@ -274,7 +275,7 @@
             this.Sellingbtn.Name = "Sellingbtn";
             this.Sellingbtn.Size = new System.Drawing.Size(75, 23);
             this.Sellingbtn.TabIndex = 11;
-            this.Sellingbtn.Text = "Selling";
+            this.Sellingbtn.Text = "Sales";
             this.Sellingbtn.UseVisualStyleBackColor = false;
             this.Sellingbtn.Click += new System.EventHandler(this.Sellingbtn_Click);
             // 
@@ -306,7 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 540);
+            this.ClientSize = new System.Drawing.Size(919, 506);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Categoriesbtn);
             this.Controls.Add(this.Sellingbtn);
@@ -316,10 +317,11 @@
             this.Name = "AttendantForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AttendantForm";
+            this.Load += new System.EventHandler(this.AttendantForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AttendantsDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,13 +330,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView AttendantsDGV;
         private System.Windows.Forms.Button Deletebtn;
         private System.Windows.Forms.Button Updatebtn;
         private System.Windows.Forms.Button Addbtn;
-        private System.Windows.Forms.TextBox SellerAge;
-        private System.Windows.Forms.TextBox SellerName;
-        private System.Windows.Forms.TextBox SellerId;
+        private System.Windows.Forms.TextBox AttendantAge;
+        private System.Windows.Forms.TextBox AttendantName;
+        private System.Windows.Forms.TextBox AttendantId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -343,9 +344,10 @@
         private System.Windows.Forms.Button Sellingbtn;
         private System.Windows.Forms.Button Productsbtn;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox SellerPassword;
-        private System.Windows.Forms.TextBox SellerPhone;
+        private System.Windows.Forms.TextBox AttendantPassword;
+        private System.Windows.Forms.TextBox AttendantPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Logoutbtn;
+        private System.Windows.Forms.DataGridView AttendantsDGV;
     }
 }

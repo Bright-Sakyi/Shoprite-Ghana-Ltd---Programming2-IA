@@ -17,7 +17,7 @@ namespace Shoprite_Ghana_Ltd
         {
             InitializeComponent();
         }
-        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Spyro\source\repos\Shoprite Ghana Ltd\Shoprite Ghana Ltd\shopritedb.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Spyro\source\repos\Shoprite Ghana Ltd\Shoprite Ghana Ltd\shopritedb.mdf;Integrated Security=True;");
 
         private void FillCategory()
         {
@@ -96,14 +96,7 @@ namespace Shoprite_Ghana_Ltd
             login.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            ProductId.Text = ProductDGV.SelectedRows[0].Cells[0].Value.ToString();
-            ProductName.Text = ProductDGV.SelectedRows[0].Cells[1].Value.ToString();
-            Quantity.Text = ProductDGV.SelectedRows[0].Cells[2].Value.ToString();
-            Price.Text = ProductDGV.SelectedRows[0].Cells[3].Value.ToString();
-            Categorybox.SelectedValue = ProductDGV.SelectedRows[0].Cells[4].Value.ToString();
-        }
+        
 
         private void Updatebtn_Click(object sender, EventArgs e)
         {
@@ -175,5 +168,65 @@ namespace Shoprite_Ghana_Ltd
             ProductDGV.DataSource = ds.Tables[0];
             Con.Close();
         }
+
+        private void Categorybox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Attendantsbtn_Click(object sender, EventArgs e)
+        {
+            AttendantForm sell = new AttendantForm();
+            sell.Show();
+            this.Hide();
+        }
+
+        private void Categoriesbtn_Click(object sender, EventArgs e)
+        {
+            CategoryForm Cat = new CategoryForm();
+            Cat.Show();
+            this.Hide();
+        }
+
+        private void Sellingbtn_Click(object sender, EventArgs e)
+        {
+            SellingForm sell = new SellingForm();
+            sell.Show();
+            this.Hide();
+        }
+
+        private void Refreshbtn_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
+
+        private void Categorysearch_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            Con.Open();
+            string query = "select * from ProductTbl where Category='" + Categorysearch.SelectedValue.ToString() + "'";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);
+            ProductDGV.DataSource = ds.Tables[0];
+            Con.Close();
+        }
+
+        private void Categorybox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ProductId.Text = ProductDGV.SelectedRows[0].Cells[0].Value.ToString();
+            ProductName.Text = ProductDGV.SelectedRows[0].Cells[1].Value.ToString();
+            Quantity.Text = ProductDGV.SelectedRows[0].Cells[2].Value.ToString();
+            Price.Text = ProductDGV.SelectedRows[0].Cells[3].Value.ToString();
+            Categorybox.SelectedValue = ProductDGV.SelectedRows[0].Cells[4].Value.ToString();
+        
+            
+        }
     }
-}
+    }
+
