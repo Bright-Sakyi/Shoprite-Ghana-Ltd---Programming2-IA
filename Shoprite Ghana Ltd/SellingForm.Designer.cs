@@ -32,9 +32,7 @@
             this.Logoutbtn = new System.Windows.Forms.Button();
             this.Categoriesbtn = new System.Windows.Forms.Button();
             this.Productbtn = new System.Windows.Forms.Button();
-            this.Attendantsbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.barcodebtn = new System.Windows.Forms.Button();
             this.ProdDGV = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.AttendantNamelbl = new System.Windows.Forms.Label();
@@ -52,7 +50,6 @@
             this.Refreshbtn = new System.Windows.Forms.Button();
             this.Price = new System.Windows.Forms.TextBox();
             this.BillDGV = new System.Windows.Forms.DataGridView();
-            this.Deletebtn = new System.Windows.Forms.Button();
             this.Printbtn = new System.Windows.Forms.Button();
             this.Addbtn = new System.Windows.Forms.Button();
             this.Categorybox = new System.Windows.Forms.ComboBox();
@@ -66,11 +63,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PrintPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.PrintDocument = new System.Drawing.Printing.PrintDocument();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProdDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Logoutbtn
@@ -109,22 +108,9 @@
             this.Productbtn.UseVisualStyleBackColor = false;
             this.Productbtn.Click += new System.EventHandler(this.Productbtn_Click);
             // 
-            // Attendantsbtn
-            // 
-            this.Attendantsbtn.BackColor = System.Drawing.Color.Firebrick;
-            this.Attendantsbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Attendantsbtn.Location = new System.Drawing.Point(16, 141);
-            this.Attendantsbtn.Name = "Attendantsbtn";
-            this.Attendantsbtn.Size = new System.Drawing.Size(75, 23);
-            this.Attendantsbtn.TabIndex = 22;
-            this.Attendantsbtn.Text = "Attendants";
-            this.Attendantsbtn.UseVisualStyleBackColor = false;
-            this.Attendantsbtn.Click += new System.EventHandler(this.Attendantsbtn_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Firebrick;
-            this.panel1.Controls.Add(this.barcodebtn);
             this.panel1.Controls.Add(this.ProdDGV);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.AttendantNamelbl);
@@ -137,7 +123,6 @@
             this.panel1.Controls.Add(this.Refreshbtn);
             this.panel1.Controls.Add(this.Price);
             this.panel1.Controls.Add(this.BillDGV);
-            this.panel1.Controls.Add(this.Deletebtn);
             this.panel1.Controls.Add(this.Printbtn);
             this.panel1.Controls.Add(this.Addbtn);
             this.panel1.Controls.Add(this.Categorybox);
@@ -154,18 +139,6 @@
             this.panel1.Size = new System.Drawing.Size(844, 502);
             this.panel1.TabIndex = 26;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // barcodebtn
-            // 
-            this.barcodebtn.BackColor = System.Drawing.Color.Firebrick;
-            this.barcodebtn.ForeColor = System.Drawing.Color.Snow;
-            this.barcodebtn.Location = new System.Drawing.Point(277, 473);
-            this.barcodebtn.Name = "barcodebtn";
-            this.barcodebtn.Size = new System.Drawing.Size(115, 23);
-            this.barcodebtn.TabIndex = 28;
-            this.barcodebtn.Text = "Generate Barcode";
-            this.barcodebtn.UseVisualStyleBackColor = false;
-            this.barcodebtn.Click += new System.EventHandler(this.barcodebtn_Click);
             // 
             // ProdDGV
             // 
@@ -331,23 +304,11 @@
             this.BillDGV.TabIndex = 14;
             this.BillDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillDGV_CellContentClick);
             // 
-            // Deletebtn
-            // 
-            this.Deletebtn.BackColor = System.Drawing.Color.Firebrick;
-            this.Deletebtn.ForeColor = System.Drawing.Color.Snow;
-            this.Deletebtn.Location = new System.Drawing.Point(647, 473);
-            this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(58, 23);
-            this.Deletebtn.TabIndex = 13;
-            this.Deletebtn.Text = "DELETE";
-            this.Deletebtn.UseVisualStyleBackColor = false;
-            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
-            // 
             // Printbtn
             // 
             this.Printbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Printbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Printbtn.Location = new System.Drawing.Point(568, 473);
+            this.Printbtn.Location = new System.Drawing.Point(613, 473);
             this.Printbtn.Name = "Printbtn";
             this.Printbtn.Size = new System.Drawing.Size(73, 23);
             this.Printbtn.TabIndex = 5;
@@ -359,7 +320,7 @@
             // 
             this.Addbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Addbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Addbtn.Location = new System.Drawing.Point(501, 473);
+            this.Addbtn.Location = new System.Drawing.Point(490, 473);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(61, 23);
             this.Addbtn.TabIndex = 6;
@@ -473,16 +434,26 @@
             // 
             this.PrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintDocument_PrintPage);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // SellingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 499);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Categoriesbtn);
             this.Controls.Add(this.Productbtn);
-            this.Controls.Add(this.Attendantsbtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SellingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -494,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -503,7 +475,6 @@
         private System.Windows.Forms.Button Logoutbtn;
         private System.Windows.Forms.Button Categoriesbtn;
         private System.Windows.Forms.Button Productbtn;
-        private System.Windows.Forms.Button Attendantsbtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Datelbl;
         private System.Windows.Forms.Label label8;
@@ -514,7 +485,6 @@
         private System.Windows.Forms.Button Refreshbtn;
         private System.Windows.Forms.TextBox Price;
         private System.Windows.Forms.DataGridView BillDGV;
-        private System.Windows.Forms.Button Deletebtn;
         private System.Windows.Forms.Button Printbtn;
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.ComboBox Categorybox;
@@ -536,6 +506,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn PPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Totalamt;
-        private System.Windows.Forms.Button barcodebtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

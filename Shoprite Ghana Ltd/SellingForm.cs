@@ -173,7 +173,31 @@ namespace Shoprite_Ghana_Ltd
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (BillID.Text == "")
+                {
+                    MessageBox.Show("Select the Bill to Delete");
+                }
+                else
+                {
+                    Con.Open();
+                    string query = "delete from BillTbl where BillId=" + BillID.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Bill deleted successfully");
+                    Con.Close();
+                    populate();
+                    BillID.Text = "";
+                    AttendantNamelbl.Text = "";
+                    Datelbl.Text = "";
+                    Price.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void AttendantNamelbl_Click(object sender, EventArgs e)

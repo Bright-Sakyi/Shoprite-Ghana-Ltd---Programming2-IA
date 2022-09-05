@@ -46,9 +46,12 @@
             this.sellingbtn = new System.Windows.Forms.Button();
             this.Attendantsbtn = new System.Windows.Forms.Button();
             this.Logoutbtn = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Adminbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -162,14 +165,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(255, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(511, 328);
+            this.dataGridView1.Size = new System.Drawing.Size(535, 328);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(790, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(762, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,7 +205,7 @@
             // 
             this.Productsbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Productsbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Productsbtn.Location = new System.Drawing.Point(12, 211);
+            this.Productsbtn.Location = new System.Drawing.Point(25, 232);
             this.Productsbtn.Name = "Productsbtn";
             this.Productsbtn.Size = new System.Drawing.Size(75, 23);
             this.Productsbtn.TabIndex = 9;
@@ -214,7 +217,7 @@
             // 
             this.sellingbtn.BackColor = System.Drawing.Color.Firebrick;
             this.sellingbtn.ForeColor = System.Drawing.Color.Snow;
-            this.sellingbtn.Location = new System.Drawing.Point(12, 285);
+            this.sellingbtn.Location = new System.Drawing.Point(25, 306);
             this.sellingbtn.Name = "sellingbtn";
             this.sellingbtn.Size = new System.Drawing.Size(75, 23);
             this.sellingbtn.TabIndex = 8;
@@ -226,7 +229,7 @@
             // 
             this.Attendantsbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Attendantsbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Attendantsbtn.Location = new System.Drawing.Point(12, 142);
+            this.Attendantsbtn.Location = new System.Drawing.Point(25, 163);
             this.Attendantsbtn.Name = "Attendantsbtn";
             this.Attendantsbtn.Size = new System.Drawing.Size(75, 23);
             this.Attendantsbtn.TabIndex = 7;
@@ -246,11 +249,34 @@
             this.Logoutbtn.UseVisualStyleBackColor = false;
             this.Logoutbtn.Click += new System.EventHandler(this.button7_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Adminbtn
+            // 
+            this.Adminbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Adminbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Adminbtn.Location = new System.Drawing.Point(25, 94);
+            this.Adminbtn.Name = "Adminbtn";
+            this.Adminbtn.Size = new System.Drawing.Size(75, 23);
+            this.Adminbtn.TabIndex = 24;
+            this.Adminbtn.Text = "Admin";
+            this.Adminbtn.UseVisualStyleBackColor = false;
+            // 
             // CategoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 506);
+            this.Controls.Add(this.Adminbtn);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Productsbtn);
             this.Controls.Add(this.sellingbtn);
@@ -265,6 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,5 +315,7 @@
         private System.Windows.Forms.Button sellingbtn;
         private System.Windows.Forms.Button Attendantsbtn;
         private System.Windows.Forms.Button Logoutbtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Adminbtn;
     }
 }

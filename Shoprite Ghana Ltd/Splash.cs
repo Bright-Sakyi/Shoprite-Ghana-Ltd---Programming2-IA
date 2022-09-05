@@ -19,6 +19,8 @@ namespace Shoprite_Ghana_Ltd
         int startpoint = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {
+
+            Myprogress.ForeColor = Color.White;
             startpoint += 1;
             Myprogress.Value = startpoint;
             if(Myprogress.Value == 100)
@@ -39,6 +41,11 @@ namespace Shoprite_Ghana_Ltd
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Myprogress_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

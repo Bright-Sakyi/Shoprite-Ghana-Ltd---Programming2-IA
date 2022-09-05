@@ -41,21 +41,23 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(193, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(193, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(260, 284);
+            this.pictureBox1.Size = new System.Drawing.Size(260, 297);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // Myprogress
             // 
-            this.Myprogress.BackColor = System.Drawing.Color.Red;
-            this.Myprogress.ForeColor = System.Drawing.Color.Red;
+            this.Myprogress.BackColor = System.Drawing.Color.Firebrick;
+            this.Myprogress.ForeColor = System.Drawing.SystemColors.Window;
             this.Myprogress.Location = new System.Drawing.Point(179, 334);
             this.Myprogress.Name = "Myprogress";
             this.Myprogress.Size = new System.Drawing.Size(293, 23);
             this.Myprogress.TabIndex = 6;
+            this.Myprogress.BackColorChanged += new System.EventHandler(this.Splash_Load);
+            this.Myprogress.Click += new System.EventHandler(this.Myprogress_Click);
             // 
             // timer1
             // 
@@ -76,7 +78,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(643, 369);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Myprogress);

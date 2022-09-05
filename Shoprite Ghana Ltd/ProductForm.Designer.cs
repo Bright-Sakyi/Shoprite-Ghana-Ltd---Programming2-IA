@@ -52,9 +52,12 @@
             this.Sellingbtn = new System.Windows.Forms.Button();
             this.Categoriesbtn = new System.Windows.Forms.Button();
             this.Logoutbtn = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Adminbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -281,7 +284,7 @@
             // 
             this.Attendantsbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Attendantsbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Attendantsbtn.Location = new System.Drawing.Point(21, 141);
+            this.Attendantsbtn.Location = new System.Drawing.Point(21, 162);
             this.Attendantsbtn.Name = "Attendantsbtn";
             this.Attendantsbtn.Size = new System.Drawing.Size(75, 23);
             this.Attendantsbtn.TabIndex = 1;
@@ -293,7 +296,7 @@
             // 
             this.Sellingbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Sellingbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Sellingbtn.Location = new System.Drawing.Point(21, 274);
+            this.Sellingbtn.Location = new System.Drawing.Point(21, 295);
             this.Sellingbtn.Name = "Sellingbtn";
             this.Sellingbtn.Size = new System.Drawing.Size(75, 23);
             this.Sellingbtn.TabIndex = 2;
@@ -305,7 +308,7 @@
             // 
             this.Categoriesbtn.BackColor = System.Drawing.Color.Firebrick;
             this.Categoriesbtn.ForeColor = System.Drawing.Color.Snow;
-            this.Categoriesbtn.Location = new System.Drawing.Point(21, 200);
+            this.Categoriesbtn.Location = new System.Drawing.Point(21, 221);
             this.Categoriesbtn.Name = "Categoriesbtn";
             this.Categoriesbtn.Size = new System.Drawing.Size(75, 23);
             this.Categoriesbtn.TabIndex = 3;
@@ -325,11 +328,34 @@
             this.Logoutbtn.UseVisualStyleBackColor = false;
             this.Logoutbtn.Click += new System.EventHandler(this.button8_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(99, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 22;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Adminbtn
+            // 
+            this.Adminbtn.BackColor = System.Drawing.Color.Firebrick;
+            this.Adminbtn.ForeColor = System.Drawing.Color.Snow;
+            this.Adminbtn.Location = new System.Drawing.Point(21, 90);
+            this.Adminbtn.Name = "Adminbtn";
+            this.Adminbtn.Size = new System.Drawing.Size(75, 23);
+            this.Adminbtn.TabIndex = 23;
+            this.Adminbtn.Text = "Admin";
+            this.Adminbtn.UseVisualStyleBackColor = false;
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 507);
+            this.Controls.Add(this.Adminbtn);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.Categoriesbtn);
             this.Controls.Add(this.Sellingbtn);
@@ -344,6 +370,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -373,5 +400,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Logoutbtn;
         private System.Windows.Forms.DataGridView ProductDGV;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Adminbtn;
     }
 }
